@@ -14,8 +14,6 @@ const
   CONSTHINTDISPLAYDURATION  = 2000;
 
 type
-  TComboboxPropertiesPopupEvent = procedure (Sender: TObject) of object;
-
   TcxComboboxHint = class(TcxComboBox)
   private
     FTimerShow: TTimer;
@@ -24,12 +22,10 @@ type
     FPopupWindow: TcxComboBoxPopupWindow;
     FDestPoint: TPoint;
     FHint: string;
-    FComboboxPropertiesPopupEvent: TComboboxPropertiesPopupEvent;
+    FComboboxPropertiesPopupEvent: TNotifyEvent;
     FScrollHEnabled: Boolean;
     FHintOnlyOnHiddenText: Boolean;
     FX, FY: Integer;
-    constructor Create(AOwner: TComponent); override;
-    destructor Destroy; override;
     function GetHintDisplayPause: Integer;
     procedure SetHintDisplayPause(aPause: Integer);
     function GetHintDisplayDuration: Integer;
@@ -41,11 +37,16 @@ type
     procedure PopUpMouseLeave(Sender: TObject);
     property PopupWindow;
   public
-    property ComboboxPropertiesPopup: TComboboxPropertiesPopupEvent read FComboboxPropertiesPopupEvent;
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+    property ComboboxPropertiesPopup: TNotifyEvent read FComboboxPropertiesPopupEvent;
     property HintDisplayPause: Integer read GetHintDisplayPause write SetHintDisplayPause;
     property HintDisplayDuration: Integer read GetHintDisplayDuration write SetHintDisplayDuration;
     property ScrollHEnabled: Boolean read FScrollHEnabled write FScrollHEnabled;
     property HintOnlyOnHiddenText: Boolean read FHintOnlyOnHiddenText write FHintOnlyOnHiddenText;
+  end;
+
+  TcxComboBox = class(TcxComboBoxHint)
   end;
 
   TcxImageComboBoxHint = class(TcxImageComboBox)
@@ -56,12 +57,10 @@ type
     FPopupWindow: TcxComboBoxPopupWindow;
     FDestPoint: TPoint;
     FHint: string;
-    FComboboxPropertiesPopupEvent: TComboboxPropertiesPopupEvent;
+    FComboboxPropertiesPopupEvent: TNotifyEvent;
     FScrollHEnabled: Boolean;
     FHintOnlyOnHiddenText: Boolean;
     FX, FY: Integer;
-    constructor Create(AOwner: TComponent); override;
-    destructor Destroy; override;
     function GetHintDisplayPause: Integer;
     procedure SetHintDisplayPause(aPause: Integer);
     function GetHintDisplayDuration: Integer;
@@ -73,11 +72,16 @@ type
     procedure PopUpMouseLeave(Sender: TObject);
     property PopupWindow;
   public
-    property ComboboxPropertiesPopup: TComboboxPropertiesPopupEvent read FComboboxPropertiesPopupEvent;
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+    property ComboboxPropertiesPopup: TNotifyEvent read FComboboxPropertiesPopupEvent;
     property HintDisplayPause: Integer read GetHintDisplayPause write SetHintDisplayPause;
     property HintDisplayDuration: Integer read GetHintDisplayDuration write SetHintDisplayDuration;
     property ScrollHEnabled: Boolean read FScrollHEnabled write FScrollHEnabled;
     property HintOnlyOnHiddenText: Boolean read FHintOnlyOnHiddenText write FHintOnlyOnHiddenText;
+  end;
+
+  TcxImageComboBox = class(TcxImageComboBoxHint)
   end;
 
 implementation
