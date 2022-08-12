@@ -179,7 +179,7 @@ end;
 
 procedure TcxComboboxHint.SetHintDisplayPause(aPause: Integer);
 begin
-  if aPause = 0 then // если значение 0, то таймер никогда не запустится
+  if aPause = 0 then // РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ 0, С‚Рѕ С‚Р°Р№РјРµСЂ РЅРёРєРѕРіРґР° РЅРµ Р·Р°РїСѓСЃС‚РёС‚СЃСЏ
     aPause := 1;
   FTimerShow.Interval := aPause;
 end;
@@ -301,7 +301,7 @@ end;
 
 procedure TcxImageComboBoxHint.SetHintDisplayPause(aPause: Integer);
 begin
-  if aPause = 0 then // если значение 0, то таймер никогда не запустится
+  if aPause = 0 then // РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ 0, С‚Рѕ С‚Р°Р№РјРµСЂ РЅРёРєРѕРіРґР° РЅРµ Р·Р°РїСѓСЃС‚РёС‚СЃСЏ
     aPause := 1;
   FTimerShow.Interval := aPause;
 end;
