@@ -6,7 +6,6 @@ uses
   cxGraphics, cxControls, cxLookAndFeels, cxHint, dxCustomHint, cxClasses,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, cxDropDownEdit,
   cxTextEdit, cxMaskEdit, cxImageComboBox, dxScreenTip,
-    
   
   
   
