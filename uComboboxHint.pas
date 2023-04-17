@@ -5,7 +5,7 @@ interface
 uses
   cxGraphics, cxControls, cxLookAndFeels, cxHint, dxCustomHint, cxClasses,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, cxDropDownEdit,
-  cxTextEdit, cxMaskEdit, cxImageComboBox, dxScreenTip,49
+  cxTextEdit, cxMaskEdit, cxImageComboBox, dxScreenTip,50
   System.Classes, Vcl.ExtCtrls, System.SysUtils, System.Types, Vcl.Forms;
 
 const
