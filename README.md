@@ -1,10 +1,12 @@
-Модуль переопределяет компоненты TcxComboBox и TcxImageComboBox, 
-добавляя функционал отображения хинта на элементах выпадающего списка.
+The module overrides the TcxComboBox and TcxImageComboBox components, 
+adding hint display functionality to the dropdown list items.
 
-Есть настройки (необязательные):
-- HintDisplayPause - пауза перед появлением хинта (по умолчанию 1 секунда); 
-- HintDisplayDuration - длительность показа хинта (по умолчанию 4 секунды); 
-- ScrollHEnabled - можно убрать горизонтальный скролл, который мешает всегда, закрывая последний/нижний элемент (по умолчанию горизонтальный скролл скрыт);
-- HintOnlyOnHiddenText - можно показывать хинт над всеми элементами, или над теми, которые не поместились по длине (по умолчанию хинт только над теми, которые не помещаются).
+There are settings (optional):
+- HintDisplayPause - pause before the hint appears (1 second by default); 
+- HintDisplayDuration - duration of hint displaying (by default 4 seconds); 
+- ScrollHEnabled - you can remove horizontal scroll, which is always in the way when closing the last/bottom element (by default horizontal scroll is hidden);
+- HintOnlyOnHiddenText - you can show hint over all elements, or over those which don't fit in length (by default hint only over those which don't fit).
 
-Для использования данного функционала нужно подключить модуль в uses (последним в списке подключенных модулей).
+To use this functionality you need to plug the module in uses (last in the list of plugins).
+
+Translated with www.DeepL.com/Translator (free version)
